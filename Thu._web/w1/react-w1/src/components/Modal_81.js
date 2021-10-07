@@ -1,9 +1,9 @@
-function Modal_81(){
+function Modal_81(props){
     return(
         <div class="modal">
-        <p>Are you sure?</p>
-        <button class="btn btn--alt">Cancel</button>
-        <button class="btn">Confirm</button>
+        <p>{props.text}</p>
+        <button class="btn btn--alt" onClick={props.onClose}>Cancel</button>
+        <button class="btn" onClick={props.onClose}>Confirm</button>
         </div>
     )
     

@@ -8,6 +8,10 @@ function Todo(props) {
     function showModalHandler(){
         setShowModal(true);
     }
+    function closeModalHandler(){
+        setShowModal(false);
+    }
+
     return (
         <div>
             <div className="card">
@@ -17,9 +21,9 @@ function Todo(props) {
                 </div>
          </div>
         {showModal && <Backdrop_81 />}
-        {showModal && <Modal_81></Modal_81>}
+        {showModal && <Modal_81 text='Are u sure?' onClose={closeModalHandler}></Modal_81>}
         </div>
     )
 }
 
-export default Todo
+export default Todo;
